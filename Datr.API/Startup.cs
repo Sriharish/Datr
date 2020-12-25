@@ -38,6 +38,7 @@ namespace Datr.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Datr.API", Version = "v1" });
             });
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +54,10 @@ namespace Datr.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(policy => {
+                policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+            });
 
             app.UseAuthorization();
 
