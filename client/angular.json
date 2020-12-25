@@ -67,6 +67,9 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "extraWebpackConfig": "webpack.config.js",
+            "sslKey": "./ssl/server.key",
+            "sslCert": "./ssl/server.crt",
+            "ssl":  true,
             "browserTarget": "client:build"
           },
           "configurations": {
