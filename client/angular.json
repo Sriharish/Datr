@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "datr",
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
@@ -29,6 +29,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -69,7 +71,7 @@
             "extraWebpackConfig": "webpack.config.js",
             "sslKey": "./ssl/server.key",
             "sslCert": "./ssl/server.crt",
-            "ssl":  true,
+            "ssl": true,
             "browserTarget": "client:build"
           },
           "configurations": {
@@ -97,6 +99,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss"
             ],
             "scripts": []
