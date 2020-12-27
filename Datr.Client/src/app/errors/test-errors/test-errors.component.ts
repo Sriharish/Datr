@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class TestErrorsComponent implements OnInit {
 
   baseUrl = 'https://localhost:44334/api/';
+  validationErrors: string[];
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -48,10 +49,11 @@ export class TestErrorsComponent implements OnInit {
   }
 
   get400ValidationError() {
-    this.http.get(this.baseUrl + 'error/not-found').subscribe(response => {
+    this.http.post(this.baseUrl + 'account/register', {}).subscribe(response => {
       console.log(response);
     }, error => {
-      console.log(error);
+        console.log(error);
+        this.validationErrors = error;
     });
   }
 

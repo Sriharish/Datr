@@ -26,7 +26,7 @@ namespace Datr.API.Controllers
         [HttpGet("not-found")]
         public ActionResult<AppUser> GetNotFound()
         {
-            var thing = _context.Users.Find(-1);
+            var thing = _context.Users.Find(7698689860);
             if (thing == null) return NotFound();
             return Ok(thing);
         }
