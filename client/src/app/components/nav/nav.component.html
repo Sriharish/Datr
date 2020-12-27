@@ -1,16 +1,18 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container">
     <a class="navbar-brand" routerLinkActive="active" routerLink="/">Datr</a>
-    <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser$ | async">
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/members">Matches</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/lists">Lists</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/messages">Messages</a>
-      </li>
+    <ul class="navbar-nav mr-auto">
+      <ng-container *ngIf="accountService.currentUser$ | async">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/members">Matches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/lists">Lists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/messages">Messages</a>
+        </li>
+      </ng-container>
     </ul>
     <div dropdown class="dropdown" *ngIf="accountService.currentUser$ | async">
       <a dropdownToggle class="dropdown-toggle text-light">Account</a>
