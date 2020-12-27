@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-auto">
+      <h1>
+        500 Server Exception
+      </h1>
+    </div>
+  </div>
+  <div class="row justify-content-lg-center">
+    <div class="col-md-auto">
+      <p>Oh no! Something went wrong on our end!</p>
+    </div>
+  </div>
+  <ng-container *ngIf="error">
+    <div class="row justify-content-lg-start">
+      <div class="col-md-auto">
+        <h5 class="text-danger font-weight-bold">Error</h5>
+        <p class="text-danger">-----</p>
+        <p class="text-danger">{{error.message}}</p>
+      </div>
+    </div>
+    <div class="row justify-content-lg-start">
+      <div class="col-md-auto">
+        <h5 class="text-danger font-weight-bold">Stack Trace</h5>
+        <p class="text-danger">-----------</p>
+        <code class="mt-5">{{error.details}}</code>
+      </div>
+    </div>
+  </ng-container>
+  <div class="row justify-content-lg-center">
+    <div class="col-md-auto">
+      <button class="btn btn-primary mt-5" (click)="goBack()"><i class="fa fa-chevron-left mr-3"></i>Go Back</button>
+    </div>
+  </div>
+</div>
