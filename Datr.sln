@@ -5,25 +5,25 @@ VisualStudioVersion = 16.0.30803.129
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datr.API", "Datr.API\Datr.API.csproj", "{B1778079-B2A2-4D67-B7B2-2D31D3580828}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "client", "client\", "{4092F674-5CCF-4E39-8582-7D54E3043DC8}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Datr.Client", "Datr.Client\", "{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_55468"
-		Debug.AspNetCompiler.PhysicalPath = "client\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55468\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56770"
+		Debug.AspNetCompiler.PhysicalPath = "Datr.Client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56770\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_55468"
-		Release.AspNetCompiler.PhysicalPath = "client\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55468\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56770"
+		Release.AspNetCompiler.PhysicalPath = "Datr.Client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56770\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "55468"
-		SlnRelativePath = "client\"
+		VWDPort = "56770"
+		SlnRelativePath = "Datr.Client\"
 	EndProjectSection
 EndProject
 Global
@@ -48,18 +48,18 @@ Global
 		{B1778079-B2A2-4D67-B7B2-2D31D3580828}.Release|x64.Build.0 = Release|Any CPU
 		{B1778079-B2A2-4D67-B7B2-2D31D3580828}.Release|x86.ActiveCfg = Release|Any CPU
 		{B1778079-B2A2-4D67-B7B2-2D31D3580828}.Release|x86.Build.0 = Release|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Debug|x64.Build.0 = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Debug|x86.Build.0 = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Release|x64.ActiveCfg = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Release|x64.Build.0 = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Release|x86.ActiveCfg = Debug|Any CPU
-		{4092F674-5CCF-4E39-8582-7D54E3043DC8}.Release|x86.Build.0 = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Debug|x64.Build.0 = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Debug|x86.Build.0 = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Release|x64.ActiveCfg = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Release|x64.Build.0 = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Release|x86.ActiveCfg = Debug|Any CPU
+		{5F9118EA-FFE9-4DDE-BEF4-CBFCF21840A4}.Release|x86.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
