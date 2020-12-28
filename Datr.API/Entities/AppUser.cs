@@ -14,10 +14,9 @@ namespace Datr.API.Entities
         public byte[] PasswordSalt { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Handle { get; set; }
-        public DateTime CreatedOn { get; set; }
+        public DateTime Created { get; set; }
         public DateTime LastActive { get; set; }
         public string Gender { get; set; }
-
         public string Summary { get; set; }
         public string InterestedIn { get; set; }
         public string Interests { get; set; }
