@@ -14,8 +14,8 @@ namespace Datr.API.Entities
         public byte[] PasswordSalt { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Handle { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime LastActive { get; set; }
+        public DateTime Created { get; set; } = DateTime.Now;
+        public DateTime LastActive { get; set; } = DateTime.Now;
         public string Gender { get; set; }
         public string Summary { get; set; }
         public string InterestedIn { get; set; }
@@ -23,10 +23,5 @@ namespace Datr.API.Entities
         public string City { get; set; }
         public string Country { get; set; }
         public ICollection<Photo> Photos { get; set; }
-        
-        public int GetAge()
-        {
-            return DateOfBirth.GetAge();
-        }
     }
 }

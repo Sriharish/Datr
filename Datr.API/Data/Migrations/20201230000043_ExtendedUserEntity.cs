@@ -74,7 +74,7 @@ namespace Datr.API.Data.Migrations
                 name: "Photos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<long>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Url = table.Column<string>(type: "TEXT", nullable: true),
                     IsMain = table.Column<bool>(type: "INTEGER", nullable: false),

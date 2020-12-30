@@ -1,5 +1,8 @@
-﻿using Datr.API.Data;
+﻿using AutoMapper;
+using Datr.API.Data;
+using Datr.API.DTOs;
 using Datr.API.Entities;
+using Datr.API.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,26 +13,36 @@ using System.Threading.Tasks;
 
 namespace Datr.API.Controllers
 {
+    [Authorize]
     public class UsersController : BaseApiController
     {
-        private readonly DataContext _context;
-        public UsersController(DataContext context)
+        private readonly IUsersRepository _usersRepository;
+        private readonly IMapper _mapper;
+        public UsersController(IUsersRepository usersRepository, IMapper mapper)
         {
-            _context = context;
+            _usersRepository = usersRepository;
+            _mapper = mapper;
         }
 
-        [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<MemberDTO>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            var users = await _usersRepository.GetMembersAsync();
+            return Ok(users);
         }
+
+        //[Authorize]
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<AppUser>> GetUser(long id)
+        //{
+        //    return await _usersRepository.GetUserByIdAsync(id);
+        //}
 
         [Authorize]
-        [HttpGet("{id}")]
-        public async Task<ActionResult<AppUser>> GetUser(long id)
+        [HttpGet("{username}")]
+        public async Task<ActionResult<MemberDTO>> GetUserByUserName(string username)
         {
-            return await _context.Users.FindAsync(id);
+            return await _usersRepository.GetMemberAsync(username);
         }
     }
 }

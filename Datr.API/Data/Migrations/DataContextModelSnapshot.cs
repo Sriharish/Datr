@@ -68,7 +68,7 @@ namespace Datr.API.Data.Migrations
 
             modelBuilder.Entity("Datr.API.Entities.Photo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 

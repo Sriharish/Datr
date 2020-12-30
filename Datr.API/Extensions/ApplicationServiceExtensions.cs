@@ -1,4 +1,7 @@
-﻿using Datr.API.Data;
+﻿using AutoMapper;
+using Datr.API.Data;
+using Datr.API.Data.Repositories;
+using Datr.API.Helpers;
 using Datr.API.Interfaces;
 using Datr.API.Services;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +23,8 @@ namespace Datr.API.Extensions
                 options.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
             return services;
         }

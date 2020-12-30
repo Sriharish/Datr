@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datr.API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201228220042_ExtendedUserEntity")]
+    [Migration("20201230000043_ExtendedUserEntity")]
     partial class ExtendedUserEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -70,7 +70,7 @@ namespace Datr.API.Data.Migrations
 
             modelBuilder.Entity("Datr.API.Entities.Photo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
