@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { AccountService } from '../services/account.service';
 import { map } from 'rxjs/operators';
-import { User } from '../models/user';
+import { User } from '../models/models';
 
 @Injectable({
   providedIn: 'root'

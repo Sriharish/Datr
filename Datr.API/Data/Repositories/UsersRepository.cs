@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using AutoMapper.QueryableExtensions;
 using Datr.API.DTOs;
 using Datr.API.Entities;
 using Datr.API.Interfaces;

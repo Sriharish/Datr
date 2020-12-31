@@ -1,4 +1,5 @@
 ﻿using Datr.API.Data;
+using Datr.API.DTOs;
 using Datr.API.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
