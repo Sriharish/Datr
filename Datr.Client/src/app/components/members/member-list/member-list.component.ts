@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Member } from '../../../models/models';
+import { MembersService } from '../../../services/members.service';
 
 @Component({
   selector: 'datr-member-list',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberListComponent implements OnInit {
 
-  constructor() { }
+  members: Member[];
+  constructor(private memberService: MembersService) { }
 
   ngOnInit(): void {
+    this.loadMembers();
+  }
+
+  loadMembers() {
+    this.memberService.getMembers().subscribe(members => {
+      this.members = members;
+      console.log(this.members);
+    });
   }
 
 }

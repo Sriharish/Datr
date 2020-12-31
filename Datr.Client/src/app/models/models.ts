@@ -9,17 +9,17 @@
 
 
 
-export interface UserDTO {
+export interface User {
     username?: string | undefined;
     token?: string | undefined;
 }
 
-export interface RegisterDTO {
+export interface Register {
     username: string;
     password: string;
 }
 
-export interface LoginDTO {
+export interface Login {
     username: string;
     password: string;
 }
@@ -51,7 +51,7 @@ export interface Photo {
     appUserId: number;
 }
 
-export interface MemberDTO {
+export interface Member {
     id: number;
     username?: string | undefined;
     photoUrl?: string | undefined;
@@ -65,10 +65,10 @@ export interface MemberDTO {
     interests?: string | undefined;
     city?: string | undefined;
     country?: string | undefined;
-    photos?: PhotoDTO[] | undefined;
+    photos?: Photo[] | undefined;
 }
 
-export interface PhotoDTO {
+export interface Photo {
     id: number;
     url?: string | undefined;
     isMain: boolean;
