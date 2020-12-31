@@ -1,4 +1,5 @@
 .card {
+  cursor: pointer;
   &:hover {
     transform: scale(1.2, 1.2);
     transition-duration: 100ms;
@@ -7,7 +8,14 @@
   }
 
   .card-img-wrapper {
-      overflow: hidden;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      .member-icons {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
   }
 
   img {
@@ -15,4 +23,18 @@
     transition-duration: 100ms;
     transition-timing-function: ease-out;
   }
+}
+
+.member-icons {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
+}
+
+.animate {
+    transition: all 0.1s ease-in-out;
 }
