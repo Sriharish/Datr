@@ -1,5 +1,5 @@
-<div class="row justify-content-start" *ngIf="member">
-  <div class="col-xs-auto">
+<div class="row" *ngIf="member">
+  <div class="col-xs-12 col-lg-4">
     <div class="card border-primary">
       <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.username}}" class="card-img-top img-thumbnail" />
       <div class="card-body">
@@ -27,5 +27,25 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="col-xs-12 col-lg-8">
+    <tabset class="member-tabset">
+      <tab heading="About {{member.username | titlecase}}">
+        <h4>Description</h4>
+        <p>{{member.summary}}</p>
+        <h4>Looking for</h4>
+        <p>{{member.interestedIn}}</p>
+      </tab>
+      <tab heading="Interests">
+        <h4>Interests</h4>
+        <p>{{member.interests}}</p>
+      </tab>
+      <tab heading="Photos">
+        <p>Photos of me</p>
+      </tab>
+      <tab heading="Messages">
+        <p>Messages will show up here</p>
+      </tab>
+    </tabset>
   </div>
 </div>
