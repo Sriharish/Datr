@@ -14,8 +14,9 @@ namespace Datr.API.Helpers
         public AutoMapperProfiles()
         {
             CreateMap<AppUser, MemberDTO>()
-                .ForMember(dest => dest.PhotoUrl, opt => opt.MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMain).Url))
-                .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.DateOfBirth.GetAge()));
+                .ForMember(dest => dest.PhotoUrl, opt => opt.MapFrom(user => user.Photos.FirstOrDefault(photo => photo.IsMain).Url))
+                .ForMember(dest => dest.Photos, opt => opt.MapFrom(user => user.Photos.Where(photo => photo.AppUserId == user.Id)))
+                .ForMember(dest => dest.Age, opt => opt.MapFrom(user => user.DateOfBirth.GetAge()));
             CreateMap<Photo, PhotoDTO>();
         }
     }
