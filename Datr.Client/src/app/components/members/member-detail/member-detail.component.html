@@ -1,5 +1,31 @@
-<div class="row justify-content-start">
-  <div class="col-sm-auto">
-    <h1>{{member?.username | titlecase}}</h1>
+<div class="row justify-content-start" *ngIf="member">
+  <div class="col-xs-auto">
+    <div class="card border-primary">
+      <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.username}}" class="card-img-top img-thumbnail" />
+      <div class="card-body">
+        <div>
+          <strong>Location:</strong>
+          <p>{{member.city}}, {{member.country}}</p>
+        </div>
+        <div>
+          <strong>Age:</strong>
+          <p>{{member.age}}</p>
+        </div>
+        <div>
+          <strong>Joined On:</strong>
+          <p>{{member.created | date}}</p>
+        </div>
+        <div>
+          <strong>Last Active:</strong>
+          <p>{{member.lastActive | date}}</p>
+        </div>
+      </div>
+      <div class="card-footer bg-white border-top-0">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary">Like<i class="fa fa-thumbs-up ml-2"></i></button>
+          <button class="btn btn-success">Message<i class="fa fa-envelope ml-2"></i></button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
